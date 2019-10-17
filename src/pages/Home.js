@@ -107,7 +107,7 @@ class Home extends Component {
         this.loginForm.reset();
         const response = {
           error: true,
-          message: JSON.parse(err.data).error,
+          message: err.errors[0],
         };
         this.setState({ response });
         this.setState({ loading: false });
@@ -124,7 +124,7 @@ class Home extends Component {
           <Grid item xs={12} md={6} className={classes.flexVerticalAlign}>
             <div>
               <Typography variant="headline" component="h1" className={classes.about}>
-                Tu Objetivo, miles de recetas
+                Un Objetivo, miles de recetas
               </Typography>
               <Typography variant="subheading" component="h2">
                 Elegi tu objetivo, explora cientos de recetas, empeza a disfrutar

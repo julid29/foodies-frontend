@@ -20,9 +20,9 @@ export function login(credentials) {
           console.log(err);
           const { response = { status: 403 } } = err;
           const { status } = response;
-          let errors = ['Error en el login. Sin respuesta del servidor.'];
+          let errors = ['Credenciales invalidas'];
           if (status === 401) {
-            errors = ['Authorization failed.'];
+            errors = ['Authorization failed'];
           }
           const data = {
             status,
