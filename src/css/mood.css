@@ -1,0 +1,11 @@
+.mood {
+    cursor: pointer;
+    transition: background-color .2s;
+		padding: 40px;
+}
+.mood:hover {
+	background: #eee;
+}
+.mood.active svg {
+	fill: blue;
+}
